@@ -19,6 +19,10 @@ app.use(express.json());
 // Routers
 app.use("/auth", AuthRouter);
 
+app.get("/", (req, res) => {
+  res.send("This is the root directory")
+})
+
 // Endpoints
 app.use("/title", TitleRouter);
 
